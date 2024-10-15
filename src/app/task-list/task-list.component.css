@@ -1,0 +1,5 @@
+.hover:hover {
+  cursor: pointer;
+  color: red;
+  border: none;
+}

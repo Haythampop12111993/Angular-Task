@@ -1,0 +1,29 @@
+<div class="container mt-2">
+  <h1 class="text-center">Welcome to AngularTask!</h1>
+  <div class="my-5">
+    <form
+      #taskForm="ngForm"
+      class="example-form d-flex justify-content-center gap-3"
+    >
+      <mat-form-field class="example-full-width w-50">
+        <mat-label>Add New Task</mat-label>
+        <input
+          matInput
+          placeholder="Ex. Task"
+          [(ngModel)]="taskName"
+          name="taskName"
+          required
+          pattern="[A-z-a-z]{3,}"
+        />
+      </mat-form-field>
+
+      <!-- <button mat-raised-button color="primary">Add</button> -->
+      <div class="example-button-row">
+        <button mat-raised-button (click)="createTask()">Add Task</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <app-task-list></app-task-list>
+  </div>
+</div>
